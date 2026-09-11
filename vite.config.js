@@ -5,4 +5,5 @@ import react from "@vitejs/plugin-react";
 // JSX syntax and gives us instant reload while developing.
 export default defineConfig({
   plugins: [react()],
+  base: "/RockPaperScissorsReact/"
 });
