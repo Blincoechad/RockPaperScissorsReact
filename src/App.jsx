@@ -31,6 +31,8 @@ function getWinnerMessage(playerChoice, computerChoice) {
 }
 
 function App() {
+  const base = import.meta.env.BASE_URL;
+
   // "result" holds the sentence shown inside the result box.
   // While it is null, we haven't played a round yet, so the
   // animated "Let's Play!..." intro is shown instead.
@@ -60,9 +62,9 @@ function App() {
       <main>
         <div className="content">
           {/* Decorative icons floating around the choice buttons */}
-          <img className="paper3" src="/media/paper.png" height={100} width={100} alt="Paper" />
-          <img className="rock1" src="/media/rock.png" height={100} width={100} alt="rocks" />
-          <img className="scissors3" src="/media/scissors.png" height={100} width={100} alt="scissors" />
+          <img className="paper3" src={`${base}media/paper.png`} height={100} width={100} alt="Paper" />
+          <img className="rock1" src={`${base}media/rock.png`} height={100} width={100} alt="rocks" />
+          <img className="scissors3" src={`${base}media/scissors.png`} height={100} width={100} alt="scissors" />
 
           <div id="choices">
             <button className="button1" onClick={() => handlePlayerChoice("rock")}>
@@ -92,9 +94,9 @@ function App() {
           </div>
 
           <div>
-            <img className="paper1" src="/media/paper.png" height={100} width={100} alt="Paper" />
-            <img className="rock2" src="/media/rock.png" height={100} width={100} alt="rocks" />
-            <img className="scissors2" src="/media/scissors.png" height={100} width={100} alt="scissors" />
+            <img className="paper1" src={`${base}media/paper.png`} height={100} width={100} alt="Paper" />
+            <img className="rock2" src={`${base}media/rock.png`} height={100} width={100} alt="rocks" />
+            <img className="scissors2" src={`${base}media/scissors.png`} height={100} width={100} alt="scissors" />
           </div>
         </div>
       </main>
@@ -107,12 +109,12 @@ function App() {
       </div>
 
       {/* More decorative icons scattered around the page */}
-      <img className="paper2" src="/media/paper.png" height={100} width={100} alt="Paper" />
-      <img className="rock3" src="/media/rock.png" height={100} width={100} alt="rocks" />
-      <img className="scissors1" src="/media/scissors.png" height={100} width={100} alt="scissors" />
+      <img className="paper2" src={`${base}media/paper.png`} height={100} width={100} alt="Paper" />
+      <img className="rock3" src={`${base}media/rock.png`} height={100} width={100} alt="rocks" />
+      <img className="scissors1" src={`${base}media/scissors.png`} height={100} width={100} alt="scissors" />
 
       <div>
-        <img className="logo" src="/media/logo.png" height={350} width={250} alt="logo" />
+        <img className="logo" src={`${base}media/logo.png`} height={350} width={250} alt="logo" />
       </div>
 
       <footer>&copy; 2025 PixelDesigns. All rights reserved.</footer>
